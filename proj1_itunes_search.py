@@ -56,6 +56,7 @@ class Song(Media):
             #self.url = d["viewURL"]
 
     def __str__(self):
+        #can just call super here without passing anything to it & it should print just fine
         return "{} by {} ({}) [{}]".format(self.title, self.author, self.release_year, self.genre)
 
     def __len__(self):
@@ -80,6 +81,7 @@ class Movie(Media):
             self.url = d["trackViewUrl"]
 
     def __str__(self):
+        #can just call super here without passing anything to it & it should print
         return "{} by {} ({}) [{}]".format(self.title, self.author, self.release_year, self.rating)
 
     def __len__(self):
